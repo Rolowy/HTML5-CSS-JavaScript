@@ -1,0 +1,30 @@
+et x = "🍕";
+let y = "";
+
+for (let i = 0; i < 10; i++) {
+y += x;
+console.log(y);
+}
+
+var pusta = "☆";
+var pelna = "★";
+var liczbapustych = 7;
+var liczbapelnych = 1;
+
+for (let i = 0; i < 8; i++) {
+var suma = "";
+var pustamax = "";
+var pelnamax = "";
+for (let i = 0; i < liczbapustych; i++) {
+pustamax += pusta;
+}
+for (let i = 0; i < liczbapelnych; i++) {
+pelnamax += pelna;
+}
+
+suma = pustamax + pelnamax + pustamax;
+
+console.log(suma);
+liczbapustych--;
+liczbapelnych += 2;
+}
