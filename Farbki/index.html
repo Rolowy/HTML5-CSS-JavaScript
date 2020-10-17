@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Strona testowa</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Strona testowa" />
+        <meta name="keywords" content="strona, testowa" />
+        <meta name="author" content="Łukasz Kamiński" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://kit.fontawesome.com/c1e21a00f0.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+
+    <body>
+    </body>
+
+    <script>
+		
+	
+		function getRndInteger(min, max) {
+			return Math.floor(Math.random() * (max - min + 1) ) + min;
+		}
+		
+		function generuj() {
+			let lewo = getRndInteger(0,95);
+			let gora = getRndInteger(0,95);
+			
+			var obiekt = document.createElement("div");
+			
+			const listakolorow = ['#1abc9c', '#2ecc71', '#3498db', '#9b59b6', '#34495e', '#f1c40f', '#e67e22', '#e74c3c'];
+			
+			
+			
+			let type = losujwielkosc()
+			obiekt.setAttribute("class", type);
+
+			obiekt.style.left = lewo+"%";
+			obiekt.style.top = gora+"%";
+			
+			
+			let color = getRndInteger(0,7);
+			obiekt.style.background = listakolorow[color];
+			
+			
+			document.body.appendChild(obiekt);
+		}
+		
+		function losujwielkosc() {
+			let wielkosc = getRndInteger(1,3);
+			
+			console.log(wielkosc);
+		
+			switch(wielkosc)
+			{
+				case 1:
+					return "circle type1";
+				case 2:
+					return "circle type2";
+				case 3:
+					return "circle type3";
+				default:
+					return "circle type1";
+			}
+		}
+		
+		for(let i = 0; i<300; i++)
+		{
+			generuj();
+		}
+
+		
+    </script>
+</html>
